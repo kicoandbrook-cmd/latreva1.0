@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Treva POS - Sistema de Gestión</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🍽️ La Treva POS</h1>
+            <p class="subtitle">Sistema de Gestión para Restaurante</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Panel de Categorías -->
+            <aside class="categories">
+                <h2>Categorías</h2>
+                <button class="cat-btn active" data-category="all">🍴 Todos</button>
+                <button class="cat-btn" data-category="bebidas">🍺 Bebidas</button>
+                <button class="cat-btn" data-category="tapas">🍤 Tapas</button>
+                <button class="cat-btn" data-category="platos">🍝 Platos</button>
+                <button class="cat-btn" data-category="postres">🍰 Postres</button>
+            </aside>
+
+            <!-- Grid de Productos -->
+            <section class="products">
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="🔍 Buscar producto...">
+                </div>
+                <div id="productsGrid" class="products-grid"></div>
+            </section>
+
+            <!-- Panel de Pedido -->
+            <aside class="order-panel">
+                <h2>Pedido Actual</h2>
+                <div class="table-selector">
+                    <label>Mesa:</label>
+                    <select id="tableSelect">
+                        <option value="1">Mesa 1</option>
+                        <option value="2">Mesa 2</option>
+                        <option value="3">Mesa 3</option>
+                        <option value="4">Mesa 4</option>
+                        <option value="5">Mesa 5</option>
+                        <option value="6">Barra</option>
+                    </select>
+                </div>
+                <div id="orderItems" class="order-items"></div>
+                <div class="order-summary">
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">0.00€</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>IVA (10%):</span>
+                        <span id="tax">0.00€</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>TOTAL:</span>
+                        <span id="total">0.00€</span>
+                    </div>
+                </div>
+                <div class="order-actions">
+                    <button id="clearBtn" class="btn-secondary">🗑️ Limpiar</button>
+                    <button id="sendBtn" class="btn-primary">✅ Enviar Pedido</button>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
